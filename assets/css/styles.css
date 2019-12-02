@@ -1,14 +1,12 @@
 * {
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
-body {
-  /* color: white; */
-}
+
 /* styling header */
 header {
   background: url("../img/main.jpg") center center no-repeat;
-  /* background-attachment: fixed; */
   background-size: cover;
   height: 100vh;
   color: white;
@@ -21,9 +19,10 @@ a {
 ul {
   list-style: none;
   display: flex;
+  /* margin: 20px; */
 }
 li {
-  margin-top: 15px;
+  margin: 20px 15px;
 }
 li:first-child {
   margin-right: auto;
@@ -36,15 +35,19 @@ li:first-child {
   height: 100vh;
 }
 #introtext h1 {
+  text-transform: capitalize;
+  font: bold 32px "Open Sans", sans-serif;
   margin-bottom: 10px;
+  text-align: center;
 }
 button {
   background: darkblue;
   color: white;
   padding: 10px 15px;
   border: none;
+  font-weight: bold;
   margin: 5px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 /* detail seciton */
 #detail,
@@ -59,7 +62,11 @@ h2 {
 }
 #detail p,
 #morebody p {
-  margin-bottom: 15px;
+  max-width: 775px;
+  line-height: 2;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 hr {
@@ -67,21 +74,38 @@ hr {
   margin: 0 auto;
   border: 2px solid blue;
 }
+
 /* img gallery */
-img {
-  max-width: 100%;
-  height: auto;
-  padding: 10px;
-}
 #imgGallery {
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 25px;
+  justify-content: center;
 }
 #imgGallery img {
-  flex: 1 1 100%;
+  max-height: 350px;
+  min-width: 100px;
+  padding: 15px;
 }
 
+#imgGallery .small {
+  flex-basis: 30%;
+}
+#imgGallery .large {
+  flex-basis: 70%;
+}
+@media (max-width: 860px) {
+  #imgGallery img {
+    max-height: 250px;
+    padding: 10px;
+  }
+}
+@media (max-width: 460px) {
+  #imgGallery img {
+    max-height: 200px;
+    padding: 5px;
+  }
+}
 /* More section  */
 #more {
   background: gray;
